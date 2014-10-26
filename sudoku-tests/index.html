@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sudoku Test Runner</title>
+	<link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen">
+	<script src="qunit/qunit.js"></script>
+	
+</head>
+<body>
+	<div id="page">
+		<h1 id="qunit-header">Sudoku Test Runner</h1>
+		<h2 id="qunit-banner"></h2>
+		<div id="qunit-testrunner-toolbar"></div>
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
+		<div id="test-div"></div>
+    
+    <!-- Your library files go here -->
+	<script>
+		var app = {}; 
+		app.usecase = {};
+		app.entity = {};
+	</script>
+    <script src="../sudoku/entities/position.js"></script>
+    <script src="../sudoku/entities/cell.js"></script>
+    <script src="../sudoku/entities/grid.js"></script>
+    
+    <!-- Your tests files go here -->
+    <script src="test-position.js"></script>
+    <script src="test-cell.js"></script>
+    <script src="test-grid.js"></script>
+    
+</body>
+</html>
