@@ -1,32 +1,31 @@
 /*global app */
 app.entity.grid = {
-	create: function () {
+	create: function (gridData) {
 		'use strict';
 		var grid,
-			gridArray = [];
-		
-		function init() {
-			var i, j, row = [];
-			for (i = 0; i < 9; i += 1) {
-				for (j = 0; j < 9; j += 1) {
-					row.push()
-				}
-				gridArray.push(row);
-			}
-		}
+			gridArray = gridData || [[]];
 		
 		grid = {
 			getRow: function (rowNum) {
-				throw 'not implemented';
+				return gridArray[rowNum - 1];
 			},
 			getRows: function () {
-				throw 'not implemented';
+				return gridArray;
 			},
 			forEachRow: function (callBack) {
 				throw 'not implemented';
 			},
-			getCell: function (position) {
+			getColumn: function (columnNum) {
 				throw 'not implemented';
+			},
+			getColumns: function () {
+				throw 'not implemented';
+			},
+			forEachColumns: function () {
+				throw 'not implemented';
+			},
+			getCell: function (position) {
+				return gridArray[position.row - 1][position.column - 1];
 			},
 			setCell: function (position, cell) {
 				throw 'not implemented';
