@@ -45,16 +45,10 @@ app.entity.grid = {
 				});
 				return gridValues;
 			},
-			forEachRowOfValues: function (callBack) {
-				grid.getRowsOfValues().map(callBack);
-			},
 			getColumn: function (columnNum) {
 				throw 'not implemented';
 			},
 			getColumns: function () {
-				throw 'not implemented';
-			},
-			forEachColumns: function () {
 				throw 'not implemented';
 			},
 			getCell: function (position) {
