@@ -5,28 +5,33 @@ app.entity.cell = {
 		var cell,
 			isGiven = false,
 			value,
-			position,
 			pencilMarks = ['', '', '', '', '', '', '', '', ''];
 		
 		function isValid(value) {
 			return !isNaN(Number(value)) && value >= 1 && value <= 9;
 		}
 		
-		function init() {
+		function setGiven(given) {
 			if (isValid(given)) {
 				value = given;
 				isGiven = true;
 			} else {
 				value = cell.EMPTY;
 			}
+		}
+		
+		function init() {
+			setGiven(given);
 			return cell;
 		}
 		
 		cell = {
-			EMPTY: '',
-			position: null,
+			EMPTY: 0,
 			getPosition: function () {
 				return cell.position;
+			},
+			setPosition: function (position) {
+				cell.position = position;
 			},
 			getValue: function () {
 				return value;
@@ -48,7 +53,7 @@ app.entity.cell = {
 				return isGiven;
 			},
 			setGiven: function (given) {
-				throw 'not implemented';
+				setGiven(given);
 			},
 			getPencilMarks: function () {
 				return pencilMarks;

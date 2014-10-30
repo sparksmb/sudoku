@@ -25,7 +25,7 @@ test('cell.isGiven() - should return be true when a cell is created with a given
 	strictEqual(cell.isGiven(), true, 'cell is given');
 });
 
-test('cell.setGiven(3) - so cell.isGiven() shoudl be true', function () {
+test('cell.setGiven(3) - so cell.isGiven() should be true', function () {
 	'use strict';
 	var cell = app.entity.cell.create();
 	cell.setGiven(3);
