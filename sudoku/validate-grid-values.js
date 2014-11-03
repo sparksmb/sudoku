@@ -1,6 +1,6 @@
 /*global app */
 app.usecase.validateGridValues = {
-	create: function () {
+	create: function (sudokuGrid) {
 		'use strict';
 		var validateGridValues,
 			candidateValues = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -24,7 +24,7 @@ app.usecase.validateGridValues = {
 		}
 		
 		validateGridValues = {
-			execute: function (sudokuGrid) {
+			execute: function () {
 				var rows = sudokuGrid.getRowValues(),
 					cols = sudokuGrid.getColumnValues(),
 					rowsAreValid = true,

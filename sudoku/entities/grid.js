@@ -49,9 +49,6 @@ app.entity.grid = {
 			getCell: function (position) {
 				return gridArray[position.row - 1][position.column - 1];
 			},
-			setValue: function (value, position) {
-				throw 'not implemented';
-			},
 			getColumn: function (columnNum) {
 				throw 'not implemented';
 			},
