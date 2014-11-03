@@ -38,7 +38,7 @@ app.entity.cell = {
 			},
 			setValue: function (number) {
 				if (isValid(number) && !isGiven) {
-					value = number;
+					value = Number(number);
 				}
 			},
 			clearValue: function () {
