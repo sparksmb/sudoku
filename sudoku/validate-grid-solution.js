@@ -9,7 +9,7 @@ app.usecase.validateGridSolution = {
 		}
 		
 		validateGridSolution = {
-			execute = function () {
+			execute: function () {
 				var isValid = validateGridValues.execute(),
 					isComplete = isGridComplete();
 					
