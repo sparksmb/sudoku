@@ -5,7 +5,8 @@ app.usecase.validateGridSolution = {
 		var validateGridSolution;
 		
 		function isGridComplete() {
-			return false;
+			throw 'not implemented';
+			//return false;
 		}
 		
 		validateGridSolution = {
